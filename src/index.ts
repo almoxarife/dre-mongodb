@@ -1,4 +1,14 @@
-import { AppDataSource } from "./data-source"
+import cors from "cors";
+import express from "express";
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+export default app;
+
+/* import { AppDataSource } from "./data-source"
 import { User } from "./entity/User"
 
 AppDataSource.initialize().then(async () => {
@@ -18,3 +28,4 @@ AppDataSource.initialize().then(async () => {
     console.log("Here you can setup and run express / fastify / any other framework.")
 
 }).catch(error => console.log(error))
+ */
